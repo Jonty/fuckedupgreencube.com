@@ -11,7 +11,20 @@ https://twitter.com/stepheniscowboy/status/147593447602273484
         <title>fucked up green cube</title>
     </head>
     <body>
-        <br><br><br><br><br>
-        <center><img src="cube.png"></center>
+        <br><br><br><br><br><br>
+        <center><img id="cube" src="cube.png" alt="A Fucked Up Green Cube"></center>
+        <script type="text/javascript">
+            window.onload = (event) => {
+                var cube = document.getElementById("cube");
+                var width = cube.clientWidth;
+                var height = cube.clientHeight;
+
+                setInterval(function() {
+                    percent = Math.random();
+                    cube.height = Math.floor(height * percent);
+                    cube.width = Math.floor(width * percent);
+                }, 50);
+            };
+        </script>
     </body>
-</html
+</html>
